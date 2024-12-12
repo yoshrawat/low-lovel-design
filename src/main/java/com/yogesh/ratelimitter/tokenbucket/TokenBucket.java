@@ -18,7 +18,7 @@ public class TokenBucket implements RateLimiter {
     }
 
     @Override
-    public boolean grantAccess() {
+    public synchronized boolean grantAccess() {
         fillBucket();
         if (currentCapacity.get() > 0) {
             currentCapacity.getAndDecrement();

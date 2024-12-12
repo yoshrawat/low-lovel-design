@@ -1,7 +1,7 @@
 package com.yogesh.snakeladder;
 
 public class Dice {
-    private int maxValue;
+    private final int maxValue;
 
     public Dice(final int maxValue) {
         this.maxValue = maxValue;

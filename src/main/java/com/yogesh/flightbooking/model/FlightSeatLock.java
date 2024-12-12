@@ -7,11 +7,11 @@ import java.util.*;
 
 @Getter
 public class FlightSeatLock {
-    private String lockBy;
-    private FlightSeat flightSeat;
-    private FlightSchedule flightSchedule;
-    private Date lockTime;
-    private Integer timeoutInSeconds;
+    private final String lockBy;
+    private final FlightSeat flightSeat;
+    private final FlightSchedule flightSchedule;
+    private final Date lockTime;
+    private final Integer timeoutInSeconds;
 
     public FlightSeatLock(final String lockBy, FlightSeat flightSeat , FlightSchedule flightSchedule, Integer timeoutInSeconds) {
         this.lockBy = lockBy;

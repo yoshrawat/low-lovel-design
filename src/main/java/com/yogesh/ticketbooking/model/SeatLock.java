@@ -5,18 +5,18 @@ import lombok.*;
 import java.time.*;
 import java.util.*;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 public class SeatLock {
-  private Seat seat;
-  private Show show;
-  private Integer timeoutInSeconds;
-  private Date lockTime;
-  private String lockedBy;
+  private final Seat seat;
+  private final Show show;
+  private final Integer timeoutInSeconds;
+  private final Date lockTime;
+  private final String lockedBy;
 
   public boolean isLockExpired() {
     final Instant lockInstant = lockTime.toInstant().plusSeconds(timeoutInSeconds);
     final Instant currentInstant = new Date().toInstant();
-    return lockInstant.isBefore(currentInstant);
+    return lockInstant.isAfter(currentInstant);
   }
 }

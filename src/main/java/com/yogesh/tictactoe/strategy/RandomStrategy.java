@@ -9,6 +9,7 @@ public class RandomStrategy implements GameStrategy {
         this.y = y;
     }
 
+    @Override
     public int[] getNextPos() {
         int x = (int) (Math.random() * this.x + 1);
         int y = (int) (Math.random() * this.y + 1);

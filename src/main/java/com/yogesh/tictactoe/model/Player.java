@@ -6,10 +6,10 @@ import java.util.*;
 
 public class Player {
     @Getter
-    private String name;
+    private final String name;
     @Getter
-    private PieceEnum pieceEnum;
-    private List<Move> moveList;
+    private final PieceEnum pieceEnum;
+    private final List<Move> moveList;
 
     public Player(String name, PieceEnum circle) {
         this.name = name;

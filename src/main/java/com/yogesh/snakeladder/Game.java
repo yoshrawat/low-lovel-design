@@ -5,8 +5,8 @@ import com.yogesh.snakeladder.exception.*;
 import java.util.*;
 
 public class Game {
-    private Board board;
-    private Dice dice;
+    private final Board board;
+    private final Dice dice;
     private GameStatus gameStatus;
     private Queue<Player> players;
 

@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Board {
     @Getter
-    private int dimension;
+    private final int dimension;
     @Getter
     private Map<Integer, SpecialEntity> specialEntities;
 

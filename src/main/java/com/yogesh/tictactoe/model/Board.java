@@ -31,8 +31,8 @@ public class Board {
         cell[cord[0]][cord[1]] = player.getPieceEnum();
         if (checkVertical(cord[1], player.getPieceEnum()) ||
                 checkHorizontal(cord[0], player.getPieceEnum()) ||
-                checkDiagnal(player.getPieceEnum()) ||
-                checkAntiDiagnal(player.getPieceEnum())
+                checkDiagonal(player.getPieceEnum()) ||
+                checkAntiDiagonal(player.getPieceEnum())
         )
             return true;
         return false;
@@ -54,7 +54,7 @@ public class Board {
         return true;
     }
 
-    private boolean checkDiagnal(PieceEnum pieceEnum) {
+    private boolean checkDiagonal(PieceEnum pieceEnum) {
         for (int row = 0; row < cell.length; row++) {
             if (cell[row][row] != pieceEnum)
                 return false;
@@ -62,7 +62,7 @@ public class Board {
         return true;
     }
 
-    private boolean checkAntiDiagnal(PieceEnum pieceEnum) {
+    private boolean checkAntiDiagonal(PieceEnum pieceEnum) {
         for (int row = 0; row < cell.length; row++) {
             if (cell[row][cell[0].length - row - 1] != pieceEnum)
                 return false;

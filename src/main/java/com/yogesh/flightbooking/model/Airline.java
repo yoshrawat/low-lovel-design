@@ -6,8 +6,8 @@ import java.util.*;
 
 @Getter
 public class Airline {
-    private String id;
-    private String name;
+    private final String id;
+    private final String name;
     private List<Flight> flightList;
 
     public Airline(final String id, final String name) {
